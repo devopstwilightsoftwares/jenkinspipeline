@@ -43,16 +43,16 @@ stages{
 //         }
 //     }
 // }
-      stage("verify tooling") {
-      steps {
-        sh '''
-          docker version
-          docker info
-          docker compose version 
-          curl --version
-        '''
-      }
-    }
+    //   stage("verify tooling") {
+    //   steps {
+    //     sh '''
+    //       docker version
+    //       docker info
+    //       docker compose version 
+    //       curl --version
+    //     '''
+    //   }
+    // }
         stage('Deploy') {
             steps {
                 sh 'docker-compose up -d'
